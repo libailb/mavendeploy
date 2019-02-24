@@ -1,7 +1,7 @@
 package com.example.test.mavendeploy.client;
 
+import com.example.test.mavendeploy.config.RedisConfig;
 import com.google.gson.Gson;
-import com.xiaomi.youpin.zhaoshang.config.RedisConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.*;
