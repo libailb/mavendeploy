@@ -22,9 +22,9 @@
 
         <!-- 数据库连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://10.234.195.58:3306/zhaoshang?characterEncoding=UTF-8"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8"
                         userId="root"
-                        password="root">
+                        password="1234">
         </jdbcConnection>
 
         <javaTypeResolver >
@@ -32,18 +32,18 @@
         </javaTypeResolver>
 
         <!-- 数据表对应的model层  -->
-        <javaModelGenerator targetPackage="com.xiaomi.youpin.zhaoshang.entity.mysql" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.example.test.mavendeploy.Entity" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
         <!-- sql mapper 映射配置文件 -->
-        <sqlMapGenerator targetPackage="sqlMap"  targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
         <!-- mybatis3中的mapper接口 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xiaomi.youpin.zhaoshang.dao.mapper" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.test.mavendeploy.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
@@ -55,7 +55,7 @@
                <!--enableCountByExample="false"-->
                <!--enableUpdateByExample="false">-->
         <!--</table>-->
-        <table schema="zhaoshang" tableName="merchant_category" domainObjectName="MerchantCategoryEntity"
+        <table schema="test" tableName="user" domainObjectName="UserEntity"
                enableInsert="false"
                enableSelectByExample="false"
                enableDeleteByExample="false"
