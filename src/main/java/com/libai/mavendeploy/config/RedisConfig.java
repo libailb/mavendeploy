@@ -1,4 +1,4 @@
-package com.example.test.mavendeploy.config;
+package com.libai.mavendeploy.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
@@ -14,10 +14,6 @@ import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 
-/**
- * @author qiyu
- * @date 2018-12-14 14:44
- */
 @Configuration
 public class RedisConfig {
 
@@ -33,17 +29,6 @@ public class RedisConfig {
     @Value("${spring.redis.jedis.pool.max-active}")
     private int maxActive;
 
-    /**
-     * 多实例host&port在此处配置
-     */
-    @Value("${spring.redis.host.config}")
-    private String hostOfConfig;
-    @Value("${spring.redis.port.config}")
-    private int portOfConfig;
-    @Value("${spring.redis.host.sform}")
-    private String hostOfSform;
-    @Value("${spring.redis.port.sform}")
-    private int portOfSform;
 
     @Value("${spring.redis.password}")
     private String passWord;
@@ -56,8 +41,8 @@ public class RedisConfig {
     @Primary
     public RedisConnectionFactory redisConnectionFactoryOfConfig() {
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
-        redisStandaloneConfiguration.setHostName(hostOfConfig);
-        redisStandaloneConfiguration.setPort(portOfConfig);
+        redisStandaloneConfiguration.setHostName("127.0.0.1");
+        redisStandaloneConfiguration.setPort(6379);
         redisStandaloneConfiguration.setDatabase(database);
         if (!passWord.isEmpty()) {
             redisStandaloneConfiguration.setPassword(RedisPassword.of(passWord));

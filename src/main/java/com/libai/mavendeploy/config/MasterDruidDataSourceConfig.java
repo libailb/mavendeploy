@@ -1,4 +1,4 @@
-package com.example.test.mavendeploy.config;
+package com.libai.mavendeploy.config;
 
 import com.alibaba.druid.filter.Filter;
 import com.alibaba.druid.pool.DruidDataSource;

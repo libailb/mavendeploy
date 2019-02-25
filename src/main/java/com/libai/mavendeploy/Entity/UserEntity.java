@@ -1,12 +1,14 @@
-package com.example.test.mavendeploy.Entity;
+package com.libai.mavendeploy.Entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
+import java.io.Serializable;
+
 @Data
 @Table(name = "`user`")
-public class UserEntity {
+public class UserEntity implements Serializable{
     @Id
     @Column(name = "`user_id`")
     private Integer userId;

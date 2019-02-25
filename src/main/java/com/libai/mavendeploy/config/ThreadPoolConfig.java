@@ -1,4 +1,4 @@
-package com.example.test.mavendeploy.config;
+package com.libai.mavendeploy.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

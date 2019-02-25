@@ -1,4 +1,4 @@
-package com.example.test.mavendeploy;
+package com.libai.mavendeploy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

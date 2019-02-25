@@ -1,6 +1,6 @@
-package com.example.test.mavendeploy.client;
+package com.libai.mavendeploy.client;
 
-import com.example.test.mavendeploy.config.RedisConfig;
+import com.libai.mavendeploy.config.RedisConfig;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
